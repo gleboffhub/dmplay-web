@@ -37,6 +37,7 @@
       padding: 24px;
       box-shadow: 0 10px 30px rgba(0,0,0,0.12);
       text-align: center;
+      box-sizing: border-box;
     }
 
     .icon {
@@ -46,8 +47,19 @@
       margin-bottom: 18px;
     }
 
-    h1 {
+    .app-title-hidden {
+      position: absolute;
+      left: -9999px;
+      top: -9999px;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      opacity: 0;
+    }
+
+    .visible-title {
       font-size: 24px;
+      font-weight: bold;
       margin: 0 0 10px;
       color: #111827;
     }
@@ -79,7 +91,10 @@
 <body>
   <div class="card">
     <img class="icon" src="free-icon-tinder-2585175.png" alt="Иконка">
-    <h1>Работы</h1>
+
+    <h1 class="app-title-hidden">Работы</h1>
+    <div class="visible-title">Плановые работы</div>
+
     <p>Открой список работ и скопируй текст для отправки.</p>
 
     <a href="https://script.google.com/macros/s/AKfycbwm_6tLU67Lzf2w1Stxfr8-moEFq7LZtLDTJOlV2GPja3QaYWliiXYr440aL3QC_dma/exec">
